@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+            {% endblock %} 
+            | Jimmy Alexander Huerta Vasquez
+        </title>
+        {% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <!--<img src="{% static 'images/LogoDJango.png' %}" alt="Logotipo"/>-->
+                <h1> EXAMEN FINAL LP3 | Jimmy Alexander Huerta Vasquez </h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/personas">Personas</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <!--<h2 class="title">Titulo de contenido (de prueba)</h2>-->
+            {% block content %}
+                <!--<strong> Contenido en layout (Padre) </strong>-->
+            {% endblock %}
+        </div>
+        <footer>
+            UNTELS - Lenguaje de Programación III &copy; Jimmy Alexander Huerta Vasquez
+        </footer>
+    </body>
+</html>
